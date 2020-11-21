@@ -29,11 +29,13 @@ public class Posicion {
 	}
 
 	public Posicion(int fila, char columna) {
-		super();
-		this.fila = fila;
-		this.columna = columna;
+		setFila(fila);
+		setColumna(columna);
 	}
 	
-	
+	public Posicion (Posicion posicion) {
+		this.columna = posicion.getColumna();
+		this.fila = posicion.getFila();
+	}
 
 }
