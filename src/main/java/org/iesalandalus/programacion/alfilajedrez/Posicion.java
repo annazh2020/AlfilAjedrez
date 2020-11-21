@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.alfilajedrez;
 
+import java.util.Objects;
+
 public class Posicion {
 	private int fila;
 	private char columna;
@@ -37,5 +39,28 @@ public class Posicion {
 		this.columna = posicion.getColumna();
 		this.fila = posicion.getFila();
 	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(columna, fila);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Posicion)) {
+			return false;
+		}
+		Posicion other = (Posicion) obj;
+		return columna == other.columna && fila == other.fila;
+	}
+	
+	
 
 }
