@@ -36,8 +36,8 @@ public class Posicion {
 	}
 	
 	public Posicion (Posicion posicion) {
-		this.columna = posicion.getColumna();
-		this.fila = posicion.getFila();
+		setColumna (posicion.getColumna());
+		setFila (posicion.getFila());
 	}
 
 
@@ -59,6 +59,13 @@ public class Posicion {
 		}
 		Posicion other = (Posicion) obj;
 		return columna == other.columna && fila == other.fila;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return String.format("[fila=%s, columna=%s]", fila, columna);
 	}
 	
 	
