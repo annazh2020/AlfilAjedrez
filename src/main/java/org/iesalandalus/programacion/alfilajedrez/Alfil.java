@@ -5,6 +5,15 @@ public class Alfil {
 	private Color color;
 	private Posicion posicion;
 	
+	private static final Color COLOR_INICIAL = Color.NEGRO;
+	
+	
+	public Alfil() {
+		color = COLOR_INICIAL;
+		char f = 0;
+		posicion = new Posicion(8, f);
+	}
+	
 	public Color getColor() {
 		return color;
 	}
@@ -21,6 +30,11 @@ public class Alfil {
 		if (posicion == null) {
 			throw new IllegalArgumentException("La posición no puede ser nula.");
 		}
+		this.posicion = posicion;
+	}
+	public Alfil(Color color, Posicion posicion) {
+		super();
+		this.color = color;
 		this.posicion = posicion;
 	}
 	
