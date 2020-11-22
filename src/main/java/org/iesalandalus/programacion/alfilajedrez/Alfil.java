@@ -30,7 +30,7 @@ public class Alfil {
 
 	private Color setColor(Color color) {
 		if (color == null) {
-			throw new IllegalArgumentException("El color no puede ser nulo.");
+			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 		}
 		return this.color = color;
 	}
@@ -124,6 +124,8 @@ public class Alfil {
 	public String toString() {
 		return String.format("color=%s, posicion=%s", color, posicion);
 	}
+
+	
 
 
 	
