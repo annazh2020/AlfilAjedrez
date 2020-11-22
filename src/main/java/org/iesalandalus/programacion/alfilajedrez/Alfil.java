@@ -9,27 +9,28 @@ public class Alfil {
 	
 	
 	public Alfil() {
-		color = Color.NEGRO;
+		setColor(Color.NEGRO);
 		posicion = new Posicion (8, 'f');
 	}
 	
 	public Alfil (Color color) {
-		if (color = COLOR_INICIAL) {
-			char f;
-			posicion = new Posicion (8,f);
-		}
-		
 		setColor(color);
+		if (color == Color.NEGRO) {
+			posicion = new Posicion (8,'f');
+		}
+		else if (color ==Color.BLANCO) {
+			posicion = new Posicion (1,'f');
+		}
 	}
 	
-	public Color getColor() {
+	public Color getColor(Color color) {
 		return color;
 	}
-	private void setColor(Color color) {
+	private Color setColor(Color color) {
 		if (color == null) {
 			throw new IllegalArgumentException("El color no puede ser nulo.");
 		}
-		this.color = color;
+		return this.color = color;
 	}
 	public Posicion getPosicion() {
 		return posicion;
@@ -42,8 +43,12 @@ public class Alfil {
 	}
 	public Alfil(Color color, Posicion posicion) {
 		super();
-		this.color = color;
+		this.setColor(color);
 		this.posicion = posicion;
+	}
+
+	public Color getColor() {
+		return color;
 	}
 	
 	
