@@ -8,7 +8,6 @@ public class Alfil {
 
 	private Color color;
 	private Posicion posicion;
-	private char columnaInicial;
 	private static final String ERROR_MOVIMIENTO = "Movimiento no permitido: ";
 
 	public Alfil() {
@@ -106,7 +105,7 @@ public class Alfil {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(color, columnaInicial, posicion);
+		return Objects.hash(color, posicion);
 	}
 
 	@Override
@@ -118,10 +117,15 @@ public class Alfil {
 			return false;
 		}
 		Alfil other = (Alfil) obj;
-		return color == other.color && columnaInicial == other.columnaInicial
-				&& Objects.equals(posicion, other.posicion);
+		return color == other.color && Objects.equals(posicion, other.posicion);
 	}
-	
+
+	@Override
+	public String toString() {
+		return String.format("color=%s, posicion=%s", color, posicion);
+	}
+
+
 	
 
 }
