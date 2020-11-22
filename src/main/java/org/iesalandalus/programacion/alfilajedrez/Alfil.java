@@ -4,7 +4,7 @@ public class Alfil {
 	
 	private Color color;
 	private Posicion posicion;
-	
+	private char columnaInicial; 
 	
 	
 	
@@ -18,7 +18,7 @@ public class Alfil {
 		if (color == Color.NEGRO) {
 			posicion = new Posicion (8,'f');
 		}
-		else if (color ==Color.BLANCO) {
+		else if (color == Color.BLANCO) {
 			posicion = new Posicion (1,'f');
 		}
 	}
@@ -41,14 +41,24 @@ public class Alfil {
 		}
 		this.posicion = posicion;
 	}
-	public Alfil(Color color, Posicion posicion) {
-		super();
-		this.setColor(color);
-		this.posicion = posicion;
-	}
+	
+	
 
 	public Color getColor() {
 		return color;
+	}
+	
+	public Alfil (Color color, char columnaInicial ) {
+		setColor(color);
+		if (columnaInicial != 'c' || columnaInicial != 'f') {
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
+		}
+		if (color == Color.NEGRO) {
+			posicion = new Posicion (8,columnaInicial);
+		}
+		else if (color == Color.BLANCO) {
+			posicion = new Posicion (1,columnaInicial);
+		}
 	}
 	
 	
