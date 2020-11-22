@@ -5,13 +5,21 @@ public class Alfil {
 	private Color color;
 	private Posicion posicion;
 	
-	private static final Color COLOR_INICIAL = Color.NEGRO;
+	
 	
 	
 	public Alfil() {
-		color = COLOR_INICIAL;
-		char f = 0;
-		posicion = new Posicion(8, f);
+		color = Color.NEGRO;
+		posicion = new Posicion (8, 'f');
+	}
+	
+	public Alfil (Color color) {
+		if (color = COLOR_INICIAL) {
+			char f;
+			posicion = new Posicion (8,f);
+		}
+		
+		setColor(color);
 	}
 	
 	public Color getColor() {
