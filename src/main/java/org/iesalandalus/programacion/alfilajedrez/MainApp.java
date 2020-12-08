@@ -9,8 +9,8 @@ public class MainApp {
 	}
 	
 	private static void mostrarAlfil() {
-		Alfil alfil1=new Alfil();
-		System.out.println("El alfil mostrado por defecto es:" +alfil1);
+		Alfil alfil=new Alfil();
+		System.out.println("El alfil mostrado por defecto es:" +alfil);
 	}
 	
 	private static void mostrarMenu() {
@@ -23,7 +23,7 @@ public class MainApp {
 	
 	private static int elegirOpcion() {
 		int opcion;
-		do {
+
 			
 			do {
 				System.out.print("Elija una opción valida: ");
@@ -49,9 +49,57 @@ public class MainApp {
 				System.out.println("Ha elegido la opción salir.");
 				break;
 			}
-				
-		} while (opcion!=5);
 		return opcion;
+	}
+	
+	private static Color elegirColor() {
+		char opcion;
+		Color B=Color.BLANCO;
+		Color N=Color.NEGRO;
+		
+			do {
+				System.out.println("Elija un color entre BLANCO y NEGRO. Introduzca letras B o N por teclado");
+				opcion = Entrada.caracter();
+			} while (opcion !='B' && opcion != 'N');
+			switch (opcion) {
+			case Color.BLANCO:
+				System.out.println("Ha elegido el color BLANCO.");
+				break;
+				
+			case Color.NEGRO:
+				System.out.println("Has elegido el color NEGRO.");
+				break;
+				
+				if (opcion=='B') {
+					System.out.println("Has elegido el color Blanco.");
+				}else {
+					System.out.println("Has elegido el color Negro.");
+				}
+				
+			}
+			 return opcion;
+		
+	}
+	
+	private static char elegirColumnaInicial() {
+		char opcion;
+		
+			do {
+				System.out.println("Elija la columna inicial entre c o f");
+				opcion = Entrada.caracter();
+			} while (opcion !='c' && opcion != 'f');
+			switch (opcion) {
+			case 'c':
+				System.out.println("La columna inicial elegida es la C.");
+				break;
+				
+			case 'f':
+				System.out.println("La columna inicial elegida es la F.");
+				break;
+				
+			}
+			 return opcion;
+		
 	}
 
 
@@ -66,6 +114,11 @@ public static void main(String[] args) {
 	MainApp.mostrarMenu();
 	
 	MainApp.elegirOpcion();
+	
+	MainApp.elegirColumnaInicial();
+	
+	
+	
 	
 	
 	
