@@ -26,11 +26,11 @@ public class Alfil {
 
 	
 
-	private Color setColor(Color color) {
+	private void setColor(Color color) {
 		if (color == null) {
 			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
 		}
-		return this.color = color;
+		this.color=color;
 	}
 
 	public Posicion getPosicion() {
