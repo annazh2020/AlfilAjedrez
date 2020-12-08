@@ -101,6 +101,15 @@ public class MainApp {
 			 return opcion;
 		
 	}
+	
+	private static void mostrarMenuDirecciones() {
+		
+		System.out.println("Dirección 1: ARRIBA_DERECHA.");
+		System.out.println("Dirección 2: ABAJO_DERECHA.");
+		System.out.println("Dirección 3: ARRIBA_IZQUIERDA.");
+		System.out.println("Dirección 4: ABAJO_IZQUIERDA.");
+		
+	}
 
 
 
@@ -109,13 +118,16 @@ public class MainApp {
 	
 public static void main(String[] args) {
 	
-	MainApp.mostrarAlfil();
+//	MainApp.mostrarAlfil();
 	
-	MainApp.mostrarMenu();
+//	MainApp.mostrarMenu();
 	
-	MainApp.elegirOpcion();
+//	MainApp.elegirOpcion();
 	
-	MainApp.elegirColumnaInicial();
+//	MainApp.elegirColumnaInicial();
+	
+	MainApp.mostrarMenuDirecciones();
+	
 	
 	
 	
