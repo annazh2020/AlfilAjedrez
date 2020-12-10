@@ -144,8 +144,9 @@ public class MainApp {
 	}
 	
 	
-	private static void crearAlfilColor(Color color) {
-		Alfil alfil2=new Alfil(color);
+	private static void crearAlfilColor() {
+		
+		Alfil alfil2=new Alfil(elegirColor());
 		System.out.println("Has creado alfil:" + alfil2);
 	}
 	
@@ -169,7 +170,7 @@ public static void main(String[] args) {
 	
 	//MainApp.elegirColor();
 	
-	MainApp.crearAlfilColor(Color.BLANCO);
+	MainApp.crearAlfilColor();
 	
 	
 	
