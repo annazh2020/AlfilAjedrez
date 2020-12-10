@@ -108,35 +108,39 @@ public class MainApp {
 		
 	}
 	
-	/*private static Direccion elegirDireccion() {
+	private static Direccion elegirDireccion() {
 		int opcion=0;
+		Direccion direccion = null;
 
 		do {
 			System.out.println("Elija una opción valida: de 1 a 4 ambas inclusive.");
+			
 			opcion = Entrada.entero();
 		} while (opcion < 1 || opcion > 4);
 		switch (opcion) {
 		case 1:
-			opcion=Direccion.ABAJO_DERECHA;
+			direccion=Direccion.ABAJO_DERECHA;
 			System.out.println("Ha elegido la opcion de mover hacía ARRIBA_DERECHA.");
 			break;
 			
 		case 2:
-			
+			direccion=Direccion.ARRIBA_IZQUIERDA;
 			System.out.println("Has elegido la opción de mover hacía ARRIBA_IZQUIERDA.");
 			break;
 			
 		case 3:
+			direccion=Direccion.ABAJO_DERECHA;
 			System.out.println("Has elegido la opción de mover hacía ABAJO_DERECHA.");
 			break;
 			
 		case 4:
+			direccion=Direccion.ABAJO_IZQUIERDA;
 			System.out.println("Ha elegido la opción de mover hacía ABAJO_IZQUIERDA.");
 			break;
 		}
-		return Direccion.;
+		return direccion;
 		
-	}*/
+	}
 	
 	private static void crearAlfilDefecto() {
 		Alfil alfil=new Alfil();
@@ -154,6 +158,15 @@ public class MainApp {
 		
 		Alfil alfil3=new Alfil (elegirColor(),elegirColumnaInicial());
 		System.out.println("Has creado alfil:" + alfil3);
+	}
+	
+	private static void mover() {
+		MainApp.mostrarMenuDirecciones();
+		MainApp.elegirDireccion();
+		System.out.println("Introduce el número de pasos a mover.");
+		int pasos=Entrada.entero();
+		
+		
 	}
 
 
