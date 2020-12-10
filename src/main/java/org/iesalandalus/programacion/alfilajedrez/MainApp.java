@@ -144,6 +144,11 @@ public class MainApp {
 	}
 	
 	
+	private static void crearAlfilColor(Color color) {
+		Alfil alfil2=new Alfil(color);
+		System.out.println("Has creado alfil:" + alfil2);
+	}
+	
 
 
 
@@ -156,13 +161,16 @@ public static void main(String[] args) {
 	
 //	MainApp.mostrarMenu();
 	
-    MainApp.elegirOpcion();
+   // MainApp.elegirOpcion();
 	
 //	MainApp.elegirColumnaInicial();
 	
 //	MainApp.mostrarMenuDirecciones();
 	
 	//MainApp.elegirColor();
+	
+	MainApp.crearAlfilColor(Color.BLANCO);
+	
 	
 	
 	
