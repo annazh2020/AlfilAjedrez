@@ -22,64 +22,60 @@ public class MainApp {
 	}
 	
 	private static int elegirOpcion() {
-		int opcion;
+		int opcion = 0;
 
-			
-			do {
-				System.out.print("Elija una opción valida: ");
-				opcion = Entrada.entero();
-			} while (opcion < 1 || opcion > 5);
-			switch (opcion) {
-			case 1:
-				System.out.println("Ha elegido la opcion de crear alfil.");
-				break;
-				
-			case 2:
-				System.out.println("Has elegido la opción de crear un alfil de un color.");
-				break;
-				
-			case 3:
-				System.out.println("Has elegido la opción de crear un alfil de un color y columna inicial dada.");
-				break;
-				
-			case 4:
-				System.out.println("Ha elegido la opción de mover el alfil.");
-				break;
-			case 5:
-				System.out.println("Ha elegido la opción salir.");
-				break;
-			}
+		do {
+			System.out.print("Elija una opción valida: ");
+			opcion = Entrada.entero();
+		} while (opcion < 1 || opcion > 5);
+
+		switch (opcion) {
+		case 1:
+			System.out.println("Ha elegido la opcion de crear alfil.");
+			break;
+
+		case 2:
+			System.out.println("Has elegido la opción de crear un alfil de un color.");
+			break;
+
+		case 3:
+			System.out.println("Has elegido la opción de crear un alfil de un color y columna inicial dada.");
+			break;
+
+		case 4:
+			System.out.println("Ha elegido la opción de mover el alfil.");
+			break;
+		case 5:
+			System.out.println("Ha elegido la opción salir.");
+			break;
+
+		}
 		return opcion;
 	}
+
+	
 	
 	private static Color elegirColor() {
 		char opcion;
-		Color B=Color.BLANCO;
-		Color N=Color.NEGRO;
+		
 		
 			do {
 				System.out.println("Elija un color entre BLANCO y NEGRO. Introduzca letras B o N por teclado");
 				opcion = Entrada.caracter();
 			} while (opcion !='B' && opcion != 'N');
-			switch (opcion) {
-			case Color.BLANCO:
-				System.out.println("Ha elegido el color BLANCO.");
-				break;
-				
-			case Color.NEGRO:
-				System.out.println("Has elegido el color NEGRO.");
-				break;
+			
 				
 				if (opcion=='B') {
 					System.out.println("Has elegido el color Blanco.");
 				}else {
 					System.out.println("Has elegido el color Negro.");
 				}
-				
+				return (opcion=='B')? Color.BLANCO : Color.NEGRO;
+			
 			}
-			 return opcion;
+			 
 		
-	}
+	
 	
 	private static char elegirColumnaInicial() {
 		char opcion;
@@ -99,8 +95,9 @@ public class MainApp {
 				
 			}
 			 return opcion;
-		
 	}
+	
+	
 	
 	private static void mostrarMenuDirecciones() {
 		
@@ -110,6 +107,43 @@ public class MainApp {
 		System.out.println("Dirección 4: ABAJO_IZQUIERDA.");
 		
 	}
+	
+	/*private static Direccion elegirDireccion() {
+		int opcion=0;
+
+		do {
+			System.out.println("Elija una opción valida: de 1 a 4 ambas inclusive.");
+			opcion = Entrada.entero();
+		} while (opcion < 1 || opcion > 4);
+		switch (opcion) {
+		case 1:
+			opcion=Direccion.ABAJO_DERECHA;
+			System.out.println("Ha elegido la opcion de mover hacía ARRIBA_DERECHA.");
+			break;
+			
+		case 2:
+			
+			System.out.println("Has elegido la opción de mover hacía ARRIBA_IZQUIERDA.");
+			break;
+			
+		case 3:
+			System.out.println("Has elegido la opción de mover hacía ABAJO_DERECHA.");
+			break;
+			
+		case 4:
+			System.out.println("Ha elegido la opción de mover hacía ABAJO_IZQUIERDA.");
+			break;
+		}
+		return Direccion.;
+		
+	}*/
+	
+	private static void crearAlfilDefecto() {
+		Alfil alfil=new Alfil();
+		System.out.println("Has creado el alfil por defecto:" + alfil);
+	}
+	
+	
 
 
 
@@ -122,11 +156,14 @@ public static void main(String[] args) {
 	
 //	MainApp.mostrarMenu();
 	
-//	MainApp.elegirOpcion();
+    MainApp.elegirOpcion();
 	
 //	MainApp.elegirColumnaInicial();
 	
-	MainApp.mostrarMenuDirecciones();
+//	MainApp.mostrarMenuDirecciones();
+	
+	//MainApp.elegirColor();
+	
 	
 	
 	
