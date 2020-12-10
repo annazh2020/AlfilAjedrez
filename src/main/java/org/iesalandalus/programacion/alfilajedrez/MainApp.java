@@ -150,6 +150,11 @@ public class MainApp {
 		System.out.println("Has creado alfil:" + alfil2);
 	}
 	
+	private static void crearAlfilColorColumna() {
+		
+		Alfil alfil3=new Alfil (elegirColor(),elegirColumnaInicial());
+		System.out.println("Has creado alfil:" + alfil3);
+	}
 
 
 
@@ -170,7 +175,9 @@ public static void main(String[] args) {
 	
 	//MainApp.elegirColor();
 	
-	MainApp.crearAlfilColor();
+	//MainApp.crearAlfilColor();
+	
+	MainApp.crearAlfilColorColumna();
 	
 	
 	
