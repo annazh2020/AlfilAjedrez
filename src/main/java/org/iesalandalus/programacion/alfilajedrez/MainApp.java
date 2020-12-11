@@ -159,7 +159,6 @@ public class MainApp {
 
 	private static void mover() throws OperationNotSupportedException {
 		MainApp.mostrarMenuDirecciones();
-		// MainApp.elegirDireccion();
 		Alfil alfil = new Alfil();
 		int pasos;
 
