@@ -76,16 +76,14 @@ public class Alfil {
 				columna=(char) (posicion.getColumna() + pasos);
 				posicion =new Posicion (fila, columna);
 				
-			
-				
 			} catch (IllegalArgumentException e) {
 				throw new OperationNotSupportedException("ERROR: Movimiento no válido (se sale del tablero).");
 			}
 			break;
 		case ABAJO_DERECHA:
 			try {
-				fila=posicion.getFila() + pasos;
-				columna=(char) (posicion.getColumna() - pasos);
+				fila=posicion.getFila() - pasos;
+				columna=(char) (posicion.getColumna() + pasos);
 				posicion =new Posicion (fila, columna);
 				
 			} catch (IllegalArgumentException e) {
@@ -94,8 +92,8 @@ public class Alfil {
 			break;
 		case ARRIBA_IZQUIERDA:
 			try {
-				fila=posicion.getFila() - pasos;
-				columna=(char) (posicion.getColumna() + pasos);
+				fila=posicion.getFila() + pasos;
+				columna=(char) (posicion.getColumna() - pasos);
 				posicion =new Posicion (fila, columna);
 				
 			} catch (IllegalArgumentException e) {
